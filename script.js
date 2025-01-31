@@ -12,7 +12,7 @@ async function displayCourses() {
     const courses = await fetchData('https://vvri.pythonanywhere.com/api/courses');
     const coursesList = document.getElementById('courses-list');
     const studentsList = document.getElementById('students-list');
-    studentsList.innerHTML = ''; // Clear students list
+    studentsList.innerHTML = ''; 
     coursesList.innerHTML = '';
     courses.forEach(course => {
         const li = document.createElement('li');
@@ -25,7 +25,7 @@ async function displayStudents() {
     const students = await fetchData('https://vvri.pythonanywhere.com/api/students');
     const studentsList = document.getElementById('students-list');
     const coursesList = document.getElementById('courses-list');
-    coursesList.innerHTML = ''; // Clear courses list
+    coursesList.innerHTML = ''; 
     studentsList.innerHTML = '';
     students.forEach(student => {
         const li = document.createElement('li');
